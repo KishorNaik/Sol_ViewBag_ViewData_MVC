@@ -1,0 +1,27 @@
+﻿@using Sol_ViewBag_ViewData.Models
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+@{
+
+    // ViewData
+    var userModelObj = ViewData["UserModelData"] as UserModel;
+
+    <h3>@userModelObj.FirstName</h3>
+    <br />
+    <h3>@userModelObj.LastName</h3>
+
+    <br />
+    <h3>@(ViewData["Data"] as String)</h3>
+
+    <br />
+
+    //ViewBag
+    <h4>@ViewBag.UserModelObj.FirstName</h4>
+    <br />
+    <h4>@ViewBag.UserModelObj.LastName</h4>
+}
